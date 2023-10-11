@@ -5,22 +5,20 @@ public class Student {
     Scanner scan = new Scanner(System.in);
     private String name;
     private int studentId;
-    private String buddy;
-    private String hometown;
+    private Student buddy;
+    private City hometown;
 
 
     //Constructor
-    Student(String name, int studentId, String buddy, String hometown){
+    Student(String name, int studentId){
         this.name = name;
         this.studentId = studentId;
-        this.buddy = buddy;
-        this.hometown = hometown;
     }
 
 
     //Methods
     public String reportBuddyName(){
-
+        return buddy.getName();
     }
 
     public void student(int studentId, String name){
@@ -31,7 +29,7 @@ public class Student {
     }
 
     public Student getBuddy() {
-
+        return buddy;
     }
 
     public String getName() {
@@ -44,5 +42,21 @@ public class Student {
         System.out.println("Enter student ID: ");
         studentId = scan.nextInt();
         return studentId;
+    }
+
+    public void setBuddy(Student buddy){
+        this.buddy = buddy;
+    }
+
+    public void setHometown(City hometown){
+        this.hometown = hometown;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setStudentId(int StudentId){
+        this.studentId = studentId;
     }
 }
