@@ -10,7 +10,7 @@ public class Student {
 
 
     //Constructor
-    Student(String name, int studentId){
+    public Student(String name, int studentId){
         this.name = name;
         this.studentId = studentId;
     }
@@ -39,8 +39,6 @@ public class Student {
     }
 
     public int getStudentId(){
-        System.out.println("Enter student ID: ");
-        studentId = scan.nextInt();
         return studentId;
     }
 
@@ -56,7 +54,5 @@ public class Student {
         this.name = name;
     }
 
-    public void setStudentId(int StudentId){
-        this.studentId = studentId;
-    }
+    public void setStudentId(int StudentId){this.studentId = studentId; }
 }
