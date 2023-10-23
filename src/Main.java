@@ -3,10 +3,20 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         //Cities
-        City City1 = new City("Sweden", "Homotippen");
-        City City2 = new City("Sweden", "Menlösa");
+        City City1 = new City("Sweden", "Stockholm");
+        City City2 = new City("Sweden", "Täby");
 
         //Students
+        ArrayList<Student> Students = new ArrayList<>();
+
+        Students.add(new Student("Lonke", 6969));
+        Students.add(new Student("Sebastian", 1337));
+        Students.add(new Student("Axel", 2000));
+
+        for(Student student : Students){
+            System.out.println("");
+        }
+
         Student Student1 = new Student("Lonke", 6969);
         Student Student2 = new Student("Sebastian", 1337);
         Student Student3 = new Student("Axel", 2000);
@@ -22,6 +32,7 @@ public class Main {
 
         System.out.println("Students are named " +Student1.getName() +", " +Student2.getName() +" and " +Student3.getName());
         System.out.println("In " +City1.getName() +": " +Student1.getName());
+        System.out.println("In " +City2.getName() +": " +Student2.getName() +" and " +Student3.getName());
 
         //Teachers
         ArrayList<Teacher> Teachers = new ArrayList<>();
@@ -31,8 +42,7 @@ public class Main {
 
         for (Teacher teacher : Teachers){
             teacher.addCourse();
-            System.out.println("Teacher has name " +teacher.name);
-            System.out.println("and has course " +teacher.course.getCourse());
+            System.out.println("Teacher has name " +teacher.name +" and has course " +teacher.course.getCourse());
         }
     }
 }
