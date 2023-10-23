@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Teacher {
     //attributes
     String name;
-    int tel;
     Course course;
 
     //constructor

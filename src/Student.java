@@ -17,16 +17,14 @@ public class Student {
 
 
     //Methods
-    public String reportBuddyName(){
-        return buddy.getName();
+    public void addCity(){
+        System.out.println("What city does the student live in? : ");
+        String cityName = scan.nextLine();
+        this.hometown = new City("Sweden", cityName, this);
     }
 
-    public void student(int studentId, String name){
-        System.out.println("Enter student name: ");
-        Scanner scan = new Scanner(System.in);
-        name = scan.nextLine();
-        System.out.println("Enter student ID: ");
-        studentId = scan.nextInt();
+    public String reportBuddyName(){
+        return name;
     }
 
     public Student getBuddy() {
@@ -34,11 +32,15 @@ public class Student {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getStudentId(){
         return studentId;
+    }
+
+    public City getHometown(){
+        return hometown;
     }
 
     public void setBuddy(Student buddy){
