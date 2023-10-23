@@ -12,7 +12,7 @@ public class Main {
         for(Student student : Students){
             System.out.println("Student is named: " +student.getName());
             student.addCity();
-            System.out.println(student.getName() +" lives in " +student.getHometown().getName());
+            System.out.println(student.getName() +" lives in" +student.getHometown().getName());
         }
 
         //Teachers
