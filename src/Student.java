@@ -23,6 +23,7 @@ public class Student {
 
     public void student(int studentId, String name){
         System.out.println("Enter student name: ");
+        Scanner scan = new Scanner(System.in);
         name = scan.nextLine();
         System.out.println("Enter student ID: ");
         studentId = scan.nextInt();
@@ -33,8 +34,6 @@ public class Student {
     }
 
     public String getName() {
-        System.out.println("Enter student name: ");
-        name = scan.nextLine();
         return name;
     }
 

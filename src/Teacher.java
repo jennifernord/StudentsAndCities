@@ -7,10 +7,8 @@ public class Teacher {
     Course course;
 
     //constructor
-    public Teacher(String name, int tel, Course course){
+    public Teacher(String name){
         this.name = name;
-        this.tel = tel;
-        this.course = course;
     }
 
     //methods
@@ -18,6 +16,7 @@ public class Teacher {
         Scanner scan = new Scanner(System.in);
         System.out.println("What course? : ");
         String courseName = scan.nextLine();
+
         this.course = new Course(courseName, this);
     }
 }
