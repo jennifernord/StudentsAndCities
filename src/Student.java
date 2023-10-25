@@ -10,7 +10,7 @@ public class Student {
 
 
     //Constructor
-    public Student(String name, int studentId){
+    public Student(String name, int studentId, Course course){
         this.name = name;
         this.studentId = studentId;
     }
@@ -26,11 +26,9 @@ public class Student {
     public String reportBuddyName(){
         return name;
     }
-
     public Student getBuddy() {
         return buddy;
     }
-
     public String getName() {
         return this.name;
     }
@@ -38,22 +36,18 @@ public class Student {
     public int getStudentId(){
         return studentId;
     }
-
     public City getHometown(){
         return hometown;
     }
-
     public void setBuddy(Student buddy){
         this.buddy = buddy;
     }
-
     public void setHometown(City hometown){
         this.hometown = hometown;
     }
-
     public void setName(String name){
         this.name = name;
     }
-
     public void setStudentId(int StudentId){this.studentId = studentId; }
+
 }

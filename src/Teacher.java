@@ -11,11 +11,12 @@ public class Teacher {
     }
 
     //methods
-    public void addCourse(){
+    public Course addCourse(){
         Scanner scan = new Scanner(System.in);
         System.out.println("What course? : ");
         String courseName = scan.nextLine();
 
         this.course = new Course(courseName, this);
+        return this.course;
     }
 }

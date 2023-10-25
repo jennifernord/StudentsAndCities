@@ -1,29 +1,35 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //Students
-        ArrayList<Student> Students = new ArrayList<>();
+        //Teachers
+        ArrayList<Teacher> teachers = new ArrayList<>();
+        ArrayList<Course> kurser= new ArrayList<>();
 
-        Students.add(new Student("Lonke", 6969));
-        Students.add(new Student("Sebastian", 1337));
-        Students.add(new Student("Axel", 2000));
+        teachers.add(new Teacher("Karen"));
+        teachers.add(new Teacher("Calle"));
 
-        for(Student student : Students){
-            System.out.println("Student is named: " +student.getName());
-            student.addCity();
-            System.out.println(student.getName() +" lives in" +student.getHometown().getName());
+        for (Teacher teacher : teachers){
+            kurser.add(teacher.addCourse());
+            System.out.println("Teacher has name " +teacher.name
+                    +" and is teaching " +teacher.course.getCourse());
         }
 
-        //Teachers
-        ArrayList<Teacher> Teachers = new ArrayList<>();
+        //Students
+        ArrayList<Student> students = new ArrayList<>();
 
-        Teachers.add(new Teacher("Karen"));
-        Teachers.add(new Teacher("Calle"));
+        students.add(new Student("Lonke", 6969, kurser.get(0)));
+        students.add(new Student("Sebastian", 1337, kurser.get(1)));
+        students.add(new Student("Axel", 2000, kurser.get(1)));
 
-        for (Teacher teacher : Teachers){
-            teacher.addCourse();
-            System.out.println("Teacher has name " +teacher.name +" and is teaching " +teacher.course.getCourse());
+        for(Student student : students){
+            System.out.println("Student is named: " +student.getName());
+            student.addCity();
+            System.out.println(student.getName()
+                    +" lives in" +student.getHometown().getName());
+            System.out.println(student.getName() +" has the course " +student.);
+
         }
     }
 }
